@@ -1,5 +1,6 @@
 import React from "react";
-import { Header } from "./Header";
+import Header from "./Header";
+import Footer from "./Footer";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -8,8 +9,9 @@ interface AppShellProps {
 export function AppShell({ children }: AppShellProps) {
   return (
     <div className="flex min-h-screen flex-col">
-      <Header variant="app" />
+      <Header area="app" />
       <main className="flex-1 bg-gray-50">{children}</main>
+      <Footer />
     </div>
   );
 }

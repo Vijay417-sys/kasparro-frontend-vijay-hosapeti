@@ -10,16 +10,18 @@ export default function HomePage() {
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       {/* Hero Section */}
       <section className="mb-16 text-center">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-          AI-SEO Audit Platform
-        </h1>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-          Comprehensive SEO auditing powered by AI. Get actionable insights to
-          improve your search visibility, trust signals, and content quality.
-        </p>
-        <Link href="/app/audit">
-          <Button size="lg">Run AI-SEO Audit</Button>
-        </Link>
+        <div className="hero-bg rounded-2xl bg-clip-padding p-10 backdrop-blur-sm">
+          <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            AI-SEO Audit Platform
+          </h1>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
+            Comprehensive SEO auditing powered by AI. Get actionable insights to
+            improve your search visibility, trust signals, and content quality.
+          </p>
+          <Link href="/app/audit">
+            <Button size="lg">Run AI-SEO Audit</Button>
+          </Link>
+        </div>
       </section>
 
       {/* Why AI-SEO vs Traditional SEO */}

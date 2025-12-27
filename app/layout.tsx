@@ -1,19 +1,26 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import React from "react";
 
-export const metadata: Metadata = {
-  title: "Kasparro - AI-SEO Audit Platform",
-  description: "Comprehensive AI-SEO auditing and optimization platform",
+export const metadata = {
+  title: "Kasparro",
+  description: "Kasparro - AI SEO & Brand Intelligence (Demo)",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  // Use a top-level flex column so footer sits below content
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="min-h-screen bg-white text-slate-900 antialiased">
+        <div className="flex min-h-screen flex-col">
+          {/* If you are using route groups, App Router will render the right layout under children.
+              This RootLayout just guarantees the sticky footer behavior */}
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
