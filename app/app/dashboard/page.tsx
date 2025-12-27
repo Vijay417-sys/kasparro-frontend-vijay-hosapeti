@@ -1,4 +1,6 @@
-"use client";
+export const dynamic = "force-dynamic";
+
+("use client");
 
 import React, { useEffect } from "react";
 import { BrandSelector } from "@/components/features/dashboard/BrandSelector";

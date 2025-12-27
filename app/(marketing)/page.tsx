@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { Button } from "@/components/primitives/Button";
 import { Card } from "@/components/primitives/Card";
