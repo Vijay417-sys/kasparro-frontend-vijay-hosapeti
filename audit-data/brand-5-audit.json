@@ -1,0 +1,278 @@
+{
+  "brandId": "example-brand-5",
+  "brandName": "Content Creators Co",
+  "domain": "contentcreators.co",
+  "lastAudited": "2024-01-19T11:30:00Z",
+  "overallScores": {
+    "aiVisibility": 65,
+    "trustEeat": 62,
+    "nonBrandedCoverage": 58
+  },
+  "modules": [
+    {
+      "id": "content-quality",
+      "name": "Content Quality",
+      "description": "Evaluates depth, accuracy, and comprehensiveness of content",
+      "score": {
+        "value": 68,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Good content quality overall",
+        "Some pages need more depth",
+        "Content is engaging but could be more comprehensive"
+      ],
+      "issues": [
+        {
+          "id": "cq-001",
+          "severity": "medium",
+          "message": "8 pages need more detailed information",
+          "affectedPages": 8,
+          "category": "depth"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "cq-rec-001",
+          "priority": "medium",
+          "title": "Enhance content depth",
+          "description": "Add more detailed information to 8 identified pages",
+          "actionItems": [
+            "Expand content on 8 pages with more examples",
+            "Add case studies and practical applications",
+            "Include more detailed explanations"
+          ],
+          "estimatedImpact": "Expected 5-8 point increase in Content Quality score"
+        }
+      ]
+    },
+    {
+      "id": "eeat-signals",
+      "name": "E-E-A-T Signals",
+      "description": "Expertise, Experience, Authoritativeness, and Trustworthiness indicators",
+      "score": {
+        "value": 65,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Author bylines present on 70% of content",
+        "Author profiles need more detail",
+        "Good industry recognition"
+      ],
+      "issues": [
+        {
+          "id": "eeat-001",
+          "severity": "medium",
+          "message": "30% of content pages lack author attribution",
+          "affectedPages": 12,
+          "category": "authority"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "eeat-rec-001",
+          "priority": "medium",
+          "title": "Add author bylines to remaining pages",
+          "description": "Complete author attribution across all content",
+          "actionItems": [
+            "Add author bylines to 12 pages",
+            "Enhance author bio pages with more credentials",
+            "Include expertise areas and experience"
+          ],
+          "estimatedImpact": "Expected 6-10 point increase in E-E-A-T score"
+        }
+      ]
+    },
+    {
+      "id": "technical-seo",
+      "name": "Technical SEO",
+      "description": "Site structure, performance, and technical implementation",
+      "score": {
+        "value": 70,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Good technical foundation",
+        "Proper schema markup on most pages",
+        "Acceptable performance metrics"
+      ],
+      "issues": [
+        {
+          "id": "tech-001",
+          "severity": "low",
+          "message": "Some pages could benefit from additional schema",
+          "affectedPages": 6,
+          "category": "structured-data"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "tech-rec-001",
+          "priority": "low",
+          "title": "Expand schema markup coverage",
+          "description": "Add schema to remaining pages",
+          "actionItems": [
+            "Add appropriate schema to 6 identified pages",
+            "Review and optimize existing schema"
+          ],
+          "estimatedImpact": "Expected 3-5 point increase in Technical SEO score"
+        }
+      ]
+    },
+    {
+      "id": "ai-readability",
+      "name": "AI Readability",
+      "description": "How well content is structured for AI search engines",
+      "score": {
+        "value": 62,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Content structure is generally good",
+        "Could benefit from more structured data",
+        "Some headings need improvement"
+      ],
+      "issues": [
+        {
+          "id": "ai-001",
+          "severity": "low",
+          "message": "Some headings could be more descriptive",
+          "affectedPages": 10,
+          "category": "structure"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "ai-rec-001",
+          "priority": "low",
+          "title": "Improve heading descriptions",
+          "description": "Make headings more descriptive and informative",
+          "actionItems": [
+            "Review and update headings on 10 pages",
+            "Ensure headings clearly describe content",
+            "Use more specific and descriptive language"
+          ],
+          "estimatedImpact": "Expected 4-6 point increase in AI Readability score"
+        }
+      ]
+    },
+    {
+      "id": "link-profile",
+      "name": "Link Profile",
+      "description": "Quality and relevance of inbound and internal links",
+      "score": {
+        "value": 58,
+        "label": "Needs Improvement",
+        "color": "orange"
+      },
+      "insights": [
+        "Moderate backlink profile",
+        "Good internal linking structure",
+        "Some opportunities for improvement"
+      ],
+      "issues": [
+        {
+          "id": "link-001",
+          "severity": "medium",
+          "message": "Limited high-authority backlinks",
+          "affectedPages": 0,
+          "category": "external-links"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "link-rec-001",
+          "priority": "medium",
+          "title": "Build high-authority backlinks",
+          "description": "Develop strategy for earning backlinks from authoritative domains",
+          "actionItems": [
+            "Create linkable assets (guides, tools, research)",
+            "Develop outreach campaign",
+            "Build relationships with industry publications"
+          ],
+          "estimatedImpact": "Expected 8-12 point increase in Link Profile score over 3-6 months"
+        }
+      ]
+    },
+    {
+      "id": "user-intent",
+      "name": "User Intent Alignment",
+      "description": "How well content matches search intent and user queries",
+      "score": {
+        "value": 68,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Most content aligns well with user intent",
+        "Some pages could better match search intent",
+        "Content depth is generally appropriate"
+      ],
+      "issues": [
+        {
+          "id": "intent-001",
+          "severity": "low",
+          "message": "5 pages have minor intent alignment issues",
+          "affectedPages": 5,
+          "category": "intent-alignment"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "intent-rec-001",
+          "priority": "low",
+          "title": "Fine-tune intent alignment",
+          "description": "Improve intent alignment on 5 identified pages",
+          "actionItems": [
+            "Review search intent for target keywords",
+            "Adjust content to better match intent",
+            "Update CTAs to align with intent"
+          ],
+          "estimatedImpact": "Expected 4-6 point increase in User Intent Alignment score"
+        }
+      ]
+    },
+    {
+      "id": "brand-signals",
+      "name": "Brand Signals",
+      "description": "Brand mentions, citations, and online presence",
+      "score": {
+        "value": 60,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Moderate brand presence",
+        "Some brand citations present",
+        "Could benefit from more brand mentions"
+      ],
+      "issues": [
+        {
+          "id": "brand-001",
+          "severity": "medium",
+          "message": "Limited brand citations in industry directories",
+          "affectedPages": 0,
+          "category": "citations"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "brand-rec-001",
+          "priority": "medium",
+          "title": "Increase brand citations",
+          "description": "Build more brand citations and mentions",
+          "actionItems": [
+            "Submit to relevant industry directories",
+            "Develop PR strategy for brand mentions",
+            "Build partnerships for co-marketing"
+          ],
+          "estimatedImpact": "Expected 8-12 point increase in Brand Signals score over 6 months"
+        }
+      ]
+    }
+  ]
+}

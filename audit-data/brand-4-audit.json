@@ -1,0 +1,141 @@
+{
+  "brandId": "example-brand-4",
+  "brandName": "E-Commerce Masters",
+  "domain": "ecommercemasters.com",
+  "lastAudited": "2024-01-22T16:20:00Z",
+  "overallScores": {
+    "aiVisibility": 90,
+    "trustEeat": 88,
+    "nonBrandedCoverage": 85
+  },
+  "modules": [
+    {
+      "id": "content-quality",
+      "name": "Content Quality",
+      "description": "Evaluates depth, accuracy, and comprehensiveness of content",
+      "score": {
+        "value": 92,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Outstanding content depth and quality",
+        "Comprehensive product descriptions with detailed specifications",
+        "Regular content updates with fresh information"
+      ],
+      "issues": [],
+      "recommendations": [
+        {
+          "id": "cq-rec-001",
+          "priority": "low",
+          "title": "Maintain current content quality standards",
+          "description": "Continue excellent content practices",
+          "actionItems": [],
+          "estimatedImpact": "Maintain current high score"
+        }
+      ]
+    },
+    {
+      "id": "eeat-signals",
+      "name": "E-E-A-T Signals",
+      "description": "Expertise, Experience, Authoritativeness, and Trustworthiness indicators",
+      "score": {
+        "value": 90,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Perfect author attribution on all pages",
+        "Comprehensive author profiles with extensive credentials",
+        "Strong industry authority and recognition"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "technical-seo",
+      "name": "Technical SEO",
+      "description": "Site structure, performance, and technical implementation",
+      "score": {
+        "value": 88,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Exceptional Core Web Vitals scores",
+        "Comprehensive schema markup implementation",
+        "Optimized mobile experience"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "ai-readability",
+      "name": "AI Readability",
+      "description": "How well content is structured for AI search engines",
+      "score": {
+        "value": 85,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Perfect content structure for AI parsing",
+        "Comprehensive structured data",
+        "Clear and descriptive headings"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "link-profile",
+      "name": "Link Profile",
+      "description": "Quality and relevance of inbound and internal links",
+      "score": {
+        "value": 82,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Strong backlink profile from authoritative domains",
+        "Excellent internal linking structure",
+        "No orphaned pages"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "user-intent",
+      "name": "User Intent Alignment",
+      "description": "How well content matches search intent and user queries",
+      "score": {
+        "value": 88,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Perfect alignment with user search intent",
+        "Content depth exceeds user expectations",
+        "Clear value propositions throughout"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "brand-signals",
+      "name": "Brand Signals",
+      "description": "Brand mentions, citations, and online presence",
+      "score": {
+        "value": 85,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Strong brand presence across all platforms",
+        "Consistent brand messaging",
+        "Extensive citation coverage"
+      ],
+      "issues": [],
+      "recommendations": []
+    }
+  ]
+}

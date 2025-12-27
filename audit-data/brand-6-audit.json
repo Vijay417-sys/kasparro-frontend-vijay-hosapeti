@@ -1,0 +1,173 @@
+{
+  "brandId": "example-brand-6",
+  "brandName": "SaaS Platform Pro",
+  "domain": "saasplatformpro.com",
+  "lastAudited": "2024-01-21T13:00:00Z",
+  "overallScores": {
+    "aiVisibility": 78,
+    "trustEeat": 75,
+    "nonBrandedCoverage": 72
+  },
+  "modules": [
+    {
+      "id": "content-quality",
+      "name": "Content Quality",
+      "description": "Evaluates depth, accuracy, and comprehensiveness of content",
+      "score": {
+        "value": 80,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Strong content quality with good depth",
+        "Comprehensive product documentation",
+        "Regular content updates"
+      ],
+      "issues": [
+        {
+          "id": "cq-001",
+          "severity": "low",
+          "message": "Some help articles could be more detailed",
+          "affectedPages": 4,
+          "category": "completeness"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "cq-rec-001",
+          "priority": "low",
+          "title": "Enhance help documentation",
+          "description": "Add more detail to 4 help articles",
+          "actionItems": [
+            "Expand help articles with step-by-step guides",
+            "Add screenshots and visual aids",
+            "Include troubleshooting sections"
+          ],
+          "estimatedImpact": "Expected 3-5 point increase in Content Quality score"
+        }
+      ]
+    },
+    {
+      "id": "eeat-signals",
+      "name": "E-E-A-T Signals",
+      "description": "Expertise, Experience, Authoritativeness, and Trustworthiness indicators",
+      "score": {
+        "value": 78,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Author bylines on 85% of content",
+        "Good author profiles with credentials",
+        "Strong industry expertise demonstrated"
+      ],
+      "issues": [
+        {
+          "id": "eeat-001",
+          "severity": "low",
+          "message": "15% of content pages lack author attribution",
+          "affectedPages": 6,
+          "category": "authority"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "eeat-rec-001",
+          "priority": "low",
+          "title": "Complete author attribution",
+          "description": "Add author bylines to remaining 6 pages",
+          "actionItems": [
+            "Add author bylines to 6 pages",
+            "Ensure all content has proper attribution"
+          ],
+          "estimatedImpact": "Expected 2-4 point increase in E-E-A-T score"
+        }
+      ]
+    },
+    {
+      "id": "technical-seo",
+      "name": "Technical SEO",
+      "description": "Site structure, performance, and technical implementation",
+      "score": {
+        "value": 82,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Excellent technical implementation",
+        "Comprehensive schema markup",
+        "Strong performance metrics"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "ai-readability",
+      "name": "AI Readability",
+      "description": "How well content is structured for AI search engines",
+      "score": {
+        "value": 75,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Good content structure for AI",
+        "Proper use of structured data",
+        "Clear heading hierarchy"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "link-profile",
+      "name": "Link Profile",
+      "description": "Quality and relevance of inbound and internal links",
+      "score": {
+        "value": 72,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Good backlink profile",
+        "Strong internal linking",
+        "No orphaned pages"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "user-intent",
+      "name": "User Intent Alignment",
+      "description": "How well content matches search intent and user queries",
+      "score": {
+        "value": 78,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Good alignment with user intent",
+        "Content depth matches expectations",
+        "Clear value propositions"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "brand-signals",
+      "name": "Brand Signals",
+      "description": "Brand mentions, citations, and online presence",
+      "score": {
+        "value": 70,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Good brand presence",
+        "Consistent brand messaging",
+        "Adequate citation coverage"
+      ],
+      "issues": [],
+      "recommendations": []
+    }
+  ]
+}

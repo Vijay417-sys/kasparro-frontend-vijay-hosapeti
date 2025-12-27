@@ -1,0 +1,181 @@
+{
+  "brandId": "example-brand-2",
+  "brandName": "Digital Marketing Pro",
+  "domain": "digitalmarketingpro.com",
+  "lastAudited": "2024-01-20T14:15:00Z",
+  "overallScores": {
+    "aiVisibility": 85,
+    "trustEeat": 78,
+    "nonBrandedCoverage": 72
+  },
+  "modules": [
+    {
+      "id": "content-quality",
+      "name": "Content Quality",
+      "description": "Evaluates depth, accuracy, and comprehensiveness of content",
+      "score": {
+        "value": 88,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Content demonstrates exceptional expertise with comprehensive technical explanations",
+        "All pages exceed 2,000 words with highly substantive information",
+        "Content is regularly updated with recent data and case studies"
+      ],
+      "issues": [
+        {
+          "id": "cq-001",
+          "severity": "low",
+          "message": "3 pages could benefit from more visual content",
+          "affectedPages": 3,
+          "category": "completeness"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "cq-rec-001",
+          "priority": "low",
+          "title": "Add visual content to key pages",
+          "description": "Enhance 3 pages with infographics and charts to improve engagement",
+          "actionItems": [
+            "Create infographics for top-performing pages",
+            "Add comparison charts to product pages"
+          ],
+          "estimatedImpact": "Expected 2-3 point increase in Content Quality score"
+        }
+      ]
+    },
+    {
+      "id": "eeat-signals",
+      "name": "E-E-A-T Signals",
+      "description": "Expertise, Experience, Authoritativeness, and Trustworthiness indicators",
+      "score": {
+        "value": 82,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Author bylines present on 95% of content pages",
+        "Comprehensive author profiles with credentials and experience",
+        "Strong industry recognition and citations"
+      ],
+      "issues": [],
+      "recommendations": [
+        {
+          "id": "eeat-rec-001",
+          "priority": "low",
+          "title": "Maintain current E-E-A-T standards",
+          "description": "Continue current practices for author attribution and expertise signals",
+          "actionItems": [],
+          "estimatedImpact": "Maintain current high score"
+        }
+      ]
+    },
+    {
+      "id": "technical-seo",
+      "name": "Technical SEO",
+      "description": "Site structure, performance, and technical implementation",
+      "score": {
+        "value": 80,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Excellent Core Web Vitals scores across all pages",
+        "Proper schema markup implementation",
+        "Mobile-responsive design with fast load times"
+      ],
+      "issues": [
+        {
+          "id": "tech-001",
+          "severity": "low",
+          "message": "Some images could be further optimized",
+          "affectedPages": 5,
+          "category": "performance"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "tech-rec-001",
+          "priority": "low",
+          "title": "Optimize remaining images",
+          "description": "Further compress 5 images to improve load times",
+          "actionItems": [
+            "Run image optimization on 5 identified pages",
+            "Convert to WebP format where applicable"
+          ],
+          "estimatedImpact": "Expected 1-2 point increase in Technical SEO score"
+        }
+      ]
+    },
+    {
+      "id": "ai-readability",
+      "name": "AI Readability",
+      "description": "How well content is structured for AI search engines",
+      "score": {
+        "value": 75,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Clear content structure with proper headings",
+        "Good use of structured data",
+        "Content is well-formatted for AI parsing"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "link-profile",
+      "name": "Link Profile",
+      "description": "Quality and relevance of inbound and internal links",
+      "score": {
+        "value": 70,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Strong internal linking structure",
+        "Good quality backlinks from authoritative domains",
+        "No orphaned pages"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "user-intent",
+      "name": "User Intent Alignment",
+      "description": "How well content matches search intent and user queries",
+      "score": {
+        "value": 83,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "Excellent alignment with user search intent",
+        "Content depth matches user expectations",
+        "Clear value proposition on all pages"
+      ],
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "id": "brand-signals",
+      "name": "Brand Signals",
+      "description": "Brand mentions, citations, and online presence",
+      "score": {
+        "value": 78,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Strong brand presence across multiple platforms",
+        "Consistent brand messaging",
+        "Good citation coverage"
+      ],
+      "issues": [],
+      "recommendations": []
+    }
+  ]
+}

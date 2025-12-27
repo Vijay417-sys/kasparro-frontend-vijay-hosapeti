@@ -1,0 +1,286 @@
+{
+  "brandId": "example-brand-3",
+  "brandName": "StartupHub Inc",
+  "domain": "startuphub.io",
+  "lastAudited": "2024-01-18T09:45:00Z",
+  "overallScores": {
+    "aiVisibility": 58,
+    "trustEeat": 52,
+    "nonBrandedCoverage": 48
+  },
+  "modules": [
+    {
+      "id": "content-quality",
+      "name": "Content Quality",
+      "description": "Evaluates depth, accuracy, and comprehensiveness of content",
+      "score": {
+        "value": 55,
+        "label": "Needs Improvement",
+        "color": "orange"
+      },
+      "insights": [
+        "Content is relatively new and needs more depth",
+        "Some pages are too short (under 800 words)",
+        "Limited case studies and examples"
+      ],
+      "issues": [
+        {
+          "id": "cq-001",
+          "severity": "high",
+          "message": "12 pages are under 800 words and lack depth",
+          "affectedPages": 12,
+          "category": "depth"
+        },
+        {
+          "id": "cq-002",
+          "severity": "medium",
+          "message": "Limited use of examples and case studies",
+          "affectedPages": 8,
+          "category": "completeness"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "cq-rec-001",
+          "priority": "high",
+          "title": "Expand short content pages",
+          "description": "Add more depth and detail to 12 pages currently under 800 words",
+          "actionItems": [
+            "Research and add detailed explanations to short pages",
+            "Include examples, case studies, and practical applications",
+            "Aim for minimum 1,200 words per page"
+          ],
+          "estimatedImpact": "Expected 10-15 point increase in Content Quality score"
+        }
+      ]
+    },
+    {
+      "id": "eeat-signals",
+      "name": "E-E-A-T Signals",
+      "description": "Expertise, Experience, Authoritativeness, and Trustworthiness indicators",
+      "score": {
+        "value": 50,
+        "label": "Needs Improvement",
+        "color": "orange"
+      },
+      "insights": [
+        "Author bylines missing on 60% of content",
+        "Limited author profiles and credentials",
+        "New brand with limited industry recognition"
+      ],
+      "issues": [
+        {
+          "id": "eeat-001",
+          "severity": "high",
+          "message": "60% of content pages lack author attribution",
+          "affectedPages": 25,
+          "category": "authority"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "eeat-rec-001",
+          "priority": "high",
+          "title": "Add author bylines to all content",
+          "description": "Create author profiles and add bylines to all 25 pages",
+          "actionItems": [
+            "Create detailed author bio pages",
+            "Add author bylines to all content pages",
+            "Include credentials and expertise areas"
+          ],
+          "estimatedImpact": "Expected 12-18 point increase in E-E-A-T score"
+        }
+      ]
+    },
+    {
+      "id": "technical-seo",
+      "name": "Technical SEO",
+      "description": "Site structure, performance, and technical implementation",
+      "score": {
+        "value": 62,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Basic technical setup is in place",
+        "Some performance optimization needed",
+        "Schema markup partially implemented"
+      ],
+      "issues": [
+        {
+          "id": "tech-001",
+          "severity": "medium",
+          "message": "Missing schema markup on product pages",
+          "affectedPages": 15,
+          "category": "structured-data"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "tech-rec-001",
+          "priority": "medium",
+          "title": "Implement comprehensive schema markup",
+          "description": "Add schema markup to all product and service pages",
+          "actionItems": [
+            "Add Product schema to 15 product pages",
+            "Implement Organization schema on homepage",
+            "Add Article schema to blog posts"
+          ],
+          "estimatedImpact": "Expected 8-12 point increase in Technical SEO score"
+        }
+      ]
+    },
+    {
+      "id": "ai-readability",
+      "name": "AI Readability",
+      "description": "How well content is structured for AI search engines",
+      "score": {
+        "value": 58,
+        "label": "Needs Improvement",
+        "color": "orange"
+      },
+      "insights": [
+        "Content structure needs improvement",
+        "Limited use of structured data",
+        "Headings could be more descriptive"
+      ],
+      "issues": [
+        {
+          "id": "ai-001",
+          "severity": "medium",
+          "message": "Inconsistent heading structure across pages",
+          "affectedPages": 20,
+          "category": "structure"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "ai-rec-001",
+          "priority": "medium",
+          "title": "Improve content structure and headings",
+          "description": "Standardize heading hierarchy and improve content structure",
+          "actionItems": [
+            "Review and fix heading structure on 20 pages",
+            "Ensure proper H1-H6 hierarchy",
+            "Add descriptive subheadings"
+          ],
+          "estimatedImpact": "Expected 6-10 point increase in AI Readability score"
+        }
+      ]
+    },
+    {
+      "id": "link-profile",
+      "name": "Link Profile",
+      "description": "Quality and relevance of inbound and internal links",
+      "score": {
+        "value": 48,
+        "label": "Needs Improvement",
+        "color": "red"
+      },
+      "insights": [
+        "Limited backlinks from authoritative sources",
+        "Some orphaned pages without internal links",
+        "New domain with limited link equity"
+      ],
+      "issues": [
+        {
+          "id": "link-001",
+          "severity": "high",
+          "message": "18 pages have no internal inbound links",
+          "affectedPages": 18,
+          "category": "internal-linking"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "link-rec-001",
+          "priority": "high",
+          "title": "Fix orphaned pages and build backlinks",
+          "description": "Add internal links to orphaned pages and develop backlink strategy",
+          "actionItems": [
+            "Add internal links to 18 orphaned pages",
+            "Develop content marketing strategy for backlinks",
+            "Reach out to industry publications for mentions"
+          ],
+          "estimatedImpact": "Expected 10-15 point increase in Link Profile score over 3-6 months"
+        }
+      ]
+    },
+    {
+      "id": "user-intent",
+      "name": "User Intent Alignment",
+      "description": "How well content matches search intent and user queries",
+      "score": {
+        "value": 60,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Some content aligns well with user intent",
+        "Some pages target keywords with mismatched intent",
+        "Content depth varies significantly"
+      ],
+      "issues": [
+        {
+          "id": "intent-001",
+          "severity": "medium",
+          "message": "10 pages have intent mismatch with target keywords",
+          "affectedPages": 10,
+          "category": "intent-alignment"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "intent-rec-001",
+          "priority": "medium",
+          "title": "Align content with search intent",
+          "description": "Review and update 10 pages to better match user search intent",
+          "actionItems": [
+            "Analyze search intent for target keywords",
+            "Update content to match intent (informational/transactional)",
+            "Add appropriate CTAs based on intent"
+          ],
+          "estimatedImpact": "Expected 8-12 point increase in User Intent Alignment score"
+        }
+      ]
+    },
+    {
+      "id": "brand-signals",
+      "name": "Brand Signals",
+      "description": "Brand mentions, citations, and online presence",
+      "score": {
+        "value": 45,
+        "label": "Needs Improvement",
+        "color": "red"
+      },
+      "insights": [
+        "Limited brand mentions across the web",
+        "New brand with minimal online presence",
+        "Inconsistent brand messaging"
+      ],
+      "issues": [
+        {
+          "id": "brand-001",
+          "severity": "high",
+          "message": "Very limited brand citations and mentions",
+          "affectedPages": 0,
+          "category": "citations"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "brand-rec-001",
+          "priority": "high",
+          "title": "Build brand presence and citations",
+          "description": "Develop comprehensive brand building strategy",
+          "actionItems": [
+            "Create brand profiles on industry directories",
+            "Develop PR strategy for brand mentions",
+            "Build relationships with industry publications"
+          ],
+          "estimatedImpact": "Expected 15-20 point increase in Brand Signals score over 6-12 months"
+        }
+      ]
+    }
+  ]
+}
