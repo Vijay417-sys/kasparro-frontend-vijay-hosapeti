@@ -34,12 +34,14 @@ export default function AuditPage() {
   // Show loading state during initial mount
   if (!isMounted) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center bg-gray-50">
+      <div className="flex min-h-[60vh] items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
         <div className="text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-100 to-purple-100">
             <span className="text-3xl">📊</span>
           </div>
-          <p className="text-lg font-medium text-gray-600">Initializing...</p>
+          <p className="text-lg font-semibold text-slate-700">
+            Initializing...
+          </p>
         </div>
       </div>
     );
@@ -48,15 +50,15 @@ export default function AuditPage() {
   // Show loading state if no audit data
   if (!currentAudit) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center bg-gray-50">
+      <div className="flex min-h-[60vh] items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
         <div className="text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-100 to-purple-100">
             <span className="text-3xl">📊</span>
           </div>
-          <p className="mb-2 text-lg font-medium text-gray-600">
+          <p className="mb-2 text-lg font-semibold text-slate-700">
             Loading audit data...
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-slate-600">
             {brands.length === 0
               ? "No brands available"
               : `Found ${brands.length} brand(s)`}
@@ -67,14 +69,16 @@ export default function AuditPage() {
   }
 
   return (
-    <div className="flex h-[calc(100vh-140px)] flex-col lg:flex-row">
+    <div className="flex h-[calc(100vh-140px)] flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 lg:flex-row">
       {/* Mobile menu button */}
-      <div className="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 lg:hidden">
-        <h1 className="text-lg font-semibold text-gray-900">Audit Modules</h1>
+      <div className="flex items-center justify-between border-b border-indigo-200/50 bg-white/80 px-4 py-3 backdrop-blur-sm lg:hidden">
+        <h1 className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-lg font-bold text-transparent">
+          Audit Modules
+        </h1>
         <button
           type="button"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="rounded-md p-2 text-gray-600 hover:bg-gray-100"
+          className="rounded-md p-2 text-slate-600 transition-colors hover:bg-indigo-100 hover:text-indigo-700"
           aria-label="Toggle menu"
         >
           <Icon name={isMobileMenuOpen ? "x" : "menu"} size={24} />
@@ -95,7 +99,7 @@ export default function AuditPage() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 overflow-y-auto bg-gray-50 p-4 lg:p-8">
+      <div className="flex-1 overflow-y-auto bg-gradient-to-br from-slate-50/50 via-blue-50/50 to-purple-50/50 p-4 backdrop-blur-sm lg:p-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentModule?.id || "empty"}
