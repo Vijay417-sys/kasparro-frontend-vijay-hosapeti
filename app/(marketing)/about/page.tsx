@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import { Card } from "@/components/primitives/Card";
 
 export default function AboutPage() {

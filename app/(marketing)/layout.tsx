@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic";
-
 import { MarketingLayout } from "@/components/layout/MarketingLayout";
 
 export default function MarketingLayoutWrapper({
