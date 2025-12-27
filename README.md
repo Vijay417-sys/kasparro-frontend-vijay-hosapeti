@@ -66,12 +66,13 @@ kasparro/
 │   │   ├── audit/                # /app/audit - Core product screen
 │   │   ├── architecture/         # /app/architecture - System representation
 │   │   └── layout.tsx            # App shell layout
-│   ├── (marketing)/              # Route group for public marketing site
-│   │   ├── page.tsx              # / - Home page
-│   │   ├── platform/             # /platform - Product overview
-│   │   ├── about/                # /about - Mission & philosophy
+│   ├── page.tsx                  # / - Home page (marketing)
+│   ├── platform/                 # /platform - Product overview
+│   │   ├── page.tsx              # Platform page content
 │   │   └── layout.tsx            # Marketing layout wrapper
-│   ├── page.tsx                  # Root / route (fallback)
+│   ├── about/                    # /about - Mission & philosophy
+│   │   ├── page.tsx              # About page content
+│   │   └── layout.tsx            # Marketing layout wrapper
 │   ├── globals.css               # Global styles + Tailwind directives
 │   └── layout.tsx                # Root layout (sticky footer structure)
 ├── components/
@@ -281,6 +282,15 @@ To add new mock data:
 1. Push repository to GitHub
 2. Import in Vercel dashboard
 3. Vercel auto-detects Next.js and deploys
+4. All routes will be automatically deployed:
+   - `/` - Home page
+   - `/platform` - Platform overview
+   - `/about` - About page
+   - `/app/dashboard` - Dashboard
+   - `/app/audit` - Audit page
+   - `/app/architecture` - Architecture page
+
+**Note:** The project uses normal folder structure (not route groups) for Vercel compatibility. All marketing pages (`/`, `/platform`, `/about`) use individual layout files that wrap the `MarketingLayout` component.
 
 The `vercel.json` file includes recommended settings.
 
@@ -290,6 +300,8 @@ The `vercel.json` file includes recommended settings.
 npm run build
 npm run start
 ```
+
+The application will be available at `http://localhost:3000` (or the port specified in your environment).
 
 ## 🔧 Tooling
 
