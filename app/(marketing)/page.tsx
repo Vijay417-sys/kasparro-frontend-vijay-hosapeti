@@ -7,20 +7,23 @@ export default function HomePage() {
   const modules = exampleAudit.modules;
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <section className="mb-20 text-center">
-        <div className="hero-bg rounded-2xl bg-clip-padding p-12 backdrop-blur-sm">
-          <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl md:text-7xl">
+      <section className="mb-24 text-center">
+        <div className="hero-bg rounded-3xl bg-clip-padding p-16 backdrop-blur-sm">
+          <div className="mb-6 inline-block rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-800">
+            AI-First SEO Platform
+          </div>
+          <h1 className="mb-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-6xl font-extrabold tracking-tight text-transparent sm:text-7xl md:text-8xl">
             AI-SEO Audit Platform
           </h1>
-          <p className="mx-auto mb-10 max-w-3xl text-xl leading-relaxed text-gray-700">
+          <p className="mx-auto mb-12 max-w-3xl text-2xl leading-relaxed text-gray-700">
             Comprehensive SEO auditing powered by AI. Get actionable insights to
             improve your search visibility, trust signals, and content quality.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link href="/app/audit">
-              <Button size="lg" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full shadow-xl sm:w-auto">
                 Run AI-SEO Audit
               </Button>
             </Link>
@@ -34,14 +37,21 @@ export default function HomePage() {
       </section>
 
       {/* Why AI-SEO vs Traditional SEO */}
-      <section className="mb-20">
-        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">
-          Why AI-SEO vs Traditional SEO
-        </h2>
+      <section className="mb-24">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-5xl font-bold text-gray-900">
+            Why AI-SEO vs Traditional SEO
+          </h2>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">
+            Built for the era of AI-powered search engines
+          </p>
+        </div>
         <div className="grid gap-8 md:grid-cols-3">
-          <Card className="h-full">
-            <div className="mb-4 text-3xl">🧠</div>
-            <h3 className="mb-3 text-xl font-bold text-gray-900">
+          <Card className="group h-full border-2 border-transparent transition-all hover:border-indigo-200 hover:shadow-xl">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-100 to-purple-100 text-4xl transition-transform group-hover:scale-110">
+              🧠
+            </div>
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">
               AI Understanding
             </h3>
             <p className="leading-relaxed text-gray-600">
@@ -49,9 +59,11 @@ export default function HomePage() {
               density. Understands context, intent, and semantic meaning.
             </p>
           </Card>
-          <Card className="h-full">
-            <div className="mb-4 text-3xl">🔍</div>
-            <h3 className="mb-3 text-xl font-bold text-gray-900">
+          <Card className="group h-full border-2 border-transparent transition-all hover:border-indigo-200 hover:shadow-xl">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 text-4xl transition-transform group-hover:scale-110">
+              🔍
+            </div>
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">
               Comprehensive Modules
             </h3>
             <p className="leading-relaxed text-gray-600">
@@ -59,9 +71,11 @@ export default function HomePage() {
               signals, technical SEO, AI readability, and more.
             </p>
           </Card>
-          <Card className="h-full">
-            <div className="mb-4 text-3xl">⚡</div>
-            <h3 className="mb-3 text-xl font-bold text-gray-900">
+          <Card className="group h-full border-2 border-transparent transition-all hover:border-indigo-200 hover:shadow-xl">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-emerald-100 text-4xl transition-transform group-hover:scale-110">
+              ⚡
+            </div>
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">
               Actionable Insights
             </h3>
             <p className="leading-relaxed text-gray-600">
@@ -73,19 +87,27 @@ export default function HomePage() {
       </section>
 
       {/* Core Modules Overview */}
-      <section className="mb-20">
-        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">
-          Core Audit Modules
-        </h2>
+      <section className="mb-24">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-5xl font-bold text-gray-900">
+            Core Audit Modules
+          </h2>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">
+            Seven specialized modules analyze every aspect of your SEO
+          </p>
+        </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {modules.map((module) => (
-            <Card key={module.id} className="h-full">
-              <div className="mb-3 flex items-center justify-between">
-                <h3 className="text-lg font-bold text-gray-900">
+            <Card
+              key={module.id}
+              className="group h-full transition-all hover:shadow-lg"
+            >
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-xl font-bold text-gray-900">
                   {module.name}
                 </h3>
                 <span
-                  className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                  className={`rounded-full px-3 py-1.5 text-sm font-bold shadow-sm ${
                     module.score.color === "green"
                       ? "bg-green-100 text-green-800"
                       : module.score.color === "orange"
@@ -96,7 +118,7 @@ export default function HomePage() {
                   {module.score.value}
                 </span>
               </div>
-              <p className="text-sm leading-relaxed text-gray-600">
+              <p className="leading-relaxed text-gray-600">
                 {module.description}
               </p>
             </Card>
@@ -105,42 +127,47 @@ export default function HomePage() {
       </section>
 
       {/* Pipeline Visualization */}
-      <section className="mb-20">
-        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">
-          How It Works
-        </h2>
-        <div className="rounded-2xl border-2 border-gray-200 bg-gradient-to-br from-gray-50 to-white p-10 shadow-lg">
-          <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+      <section className="mb-24">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-5xl font-bold text-gray-900">
+            How It Works
+          </h2>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">
+            From input to actionable insights in three steps
+          </p>
+        </div>
+        <div className="rounded-3xl border-2 border-gray-200 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-12 shadow-2xl">
+          <div className="flex flex-col items-center justify-between gap-12 md:flex-row">
             <div className="flex-1 text-center">
-              <div className="mb-4 inline-block rounded-full bg-blue-100 p-4">
-                <span className="text-3xl">📥</span>
+              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-4xl shadow-lg">
+                📥
               </div>
-              <div className="mb-3 text-3xl font-bold text-gray-900">Input</div>
-              <p className="text-base leading-relaxed text-gray-600">
+              <div className="mb-4 text-4xl font-bold text-gray-900">Input</div>
+              <p className="text-lg leading-relaxed text-gray-700">
                 Website content, structure, and signals
               </p>
             </div>
-            <div className="text-4xl text-gray-400">→</div>
+            <div className="text-5xl font-bold text-indigo-400">→</div>
             <div className="flex-1 text-center">
-              <div className="mb-4 inline-block rounded-full bg-purple-100 p-4">
-                <span className="text-3xl">⚙️</span>
+              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 text-4xl shadow-lg">
+                ⚙️
               </div>
-              <div className="mb-3 text-3xl font-bold text-gray-900">
+              <div className="mb-4 text-4xl font-bold text-gray-900">
                 Modules
               </div>
-              <p className="text-base leading-relaxed text-gray-600">
+              <p className="text-lg leading-relaxed text-gray-700">
                 7 specialized audit modules analyze your content
               </p>
             </div>
-            <div className="text-4xl text-gray-400">→</div>
+            <div className="text-5xl font-bold text-indigo-400">→</div>
             <div className="flex-1 text-center">
-              <div className="mb-4 inline-block rounded-full bg-green-100 p-4">
-                <span className="text-3xl">📊</span>
+              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-green-600 text-4xl shadow-lg">
+                📊
               </div>
-              <div className="mb-3 text-3xl font-bold text-gray-900">
+              <div className="mb-4 text-4xl font-bold text-gray-900">
                 Output
               </div>
-              <p className="text-base leading-relaxed text-gray-600">
+              <p className="text-lg leading-relaxed text-gray-700">
                 Scores, insights, issues, and recommendations
               </p>
             </div>

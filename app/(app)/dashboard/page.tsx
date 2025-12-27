@@ -27,18 +27,25 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="mb-8 text-3xl font-bold text-gray-900">Dashboard</h1>
+    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mb-8">
+        <h1 className="mb-2 text-4xl font-bold text-gray-900">Dashboard</h1>
+        <p className="text-lg text-gray-600">
+          Overview of your brand&apos;s AI-SEO performance
+        </p>
+      </div>
 
-      <BrandSelector />
+      <div className="mb-8">
+        <BrandSelector />
+      </div>
 
       {currentAudit ? (
         <div>
-          <div className="mb-6">
-            <h2 className="text-xl font-semibold text-gray-900">
+          <div className="mb-8 rounded-xl border-2 border-gray-200 bg-gradient-to-r from-gray-50 to-white p-6">
+            <h2 className="mb-2 text-2xl font-bold text-gray-900">
               {currentAudit.brandName}
             </h2>
-            <p className="text-sm text-gray-600">
+            <p className="text-base text-gray-600">
               Last audited: {formatDate(currentAudit.lastAudited)}
             </p>
           </div>
@@ -63,8 +70,11 @@ export default function DashboardPage() {
           </div>
         </div>
       ) : (
-        <div className="rounded-lg border border-gray-200 bg-white p-8 text-center">
-          <p className="text-gray-600">
+        <div className="rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 p-12 text-center">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-200">
+            <span className="text-3xl">📊</span>
+          </div>
+          <p className="text-lg font-medium text-gray-600">
             Select a brand to view audit snapshot data.
           </p>
         </div>
