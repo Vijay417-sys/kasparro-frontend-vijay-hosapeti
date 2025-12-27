@@ -2,6 +2,19 @@
 
 A comprehensive AI-SEO auditing and optimization platform built with Next.js, TypeScript, and Tailwind CSS. This repository implements the **Kasparro Frontend Engineering Assignment (V1)** with both a public marketing site and a product dashboard for running AI-powered SEO audits.
 
+## 🌐 Live Demo
+
+Ready for deployment on [Vercel](https://vercel.com) - Connect your GitHub repository for automatic deployments.
+
+## 📋 Features
+
+- **7 Complete Brand Audits** - Pre-loaded mock data for testing
+- **7 Audit Modules** - Content Quality, E-E-A-T, Technical SEO, AI Readability, Link Profile, User Intent, Brand Signals
+- **Interactive Dashboard** - Real-time brand selection and score visualization
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Type-Safe** - Full TypeScript coverage with strict typing
+- **Tested** - Unit tests for components and state management
+
 ## 🎯 Assignment Compliance
 
 This implementation strictly follows the assignment requirements:
