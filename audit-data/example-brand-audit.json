@@ -1,0 +1,374 @@
+{
+  "brandId": "example-brand-1",
+  "brandName": "TechCorp Solutions",
+  "domain": "techcorp.example.com",
+  "lastAudited": "2024-01-15T10:30:00Z",
+  "overallScores": {
+    "aiVisibility": 72,
+    "trustEeat": 68,
+    "nonBrandedCoverage": 65
+  },
+  "modules": [
+    {
+      "id": "content-quality",
+      "name": "Content Quality",
+      "description": "Evaluates depth, accuracy, and comprehensiveness of content",
+      "score": {
+        "value": 75,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Content demonstrates strong expertise with detailed technical explanations",
+        "Most pages exceed 1,500 words with substantive information",
+        "Some pages lack recent updates (last modified >12 months ago)"
+      ],
+      "issues": [
+        {
+          "id": "cq-001",
+          "severity": "medium",
+          "message": "15 pages have not been updated in over 12 months",
+          "affectedPages": 15,
+          "category": "freshness"
+        },
+        {
+          "id": "cq-002",
+          "severity": "low",
+          "message": "Some product pages lack detailed specifications",
+          "affectedPages": 8,
+          "category": "completeness"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "cq-rec-001",
+          "priority": "high",
+          "title": "Update stale content",
+          "description": "Refresh outdated pages with current information and recent data",
+          "actionItems": [
+            "Review and update 15 pages last modified >12 months ago",
+            "Add 2024 statistics and case studies where applicable",
+            "Update product specifications with latest versions"
+          ],
+          "estimatedImpact": "Expected 8-12 point increase in Content Quality score"
+        },
+        {
+          "id": "cq-rec-002",
+          "priority": "medium",
+          "title": "Enhance product page depth",
+          "description": "Add comprehensive specifications and use cases to product pages",
+          "actionItems": [
+            "Add detailed technical specifications to 8 product pages",
+            "Include comparison tables with competitors",
+            "Add customer testimonials and case studies"
+          ],
+          "estimatedImpact": "Expected 5-7 point increase in Content Quality score"
+        }
+      ]
+    },
+    {
+      "id": "eeat-signals",
+      "name": "E-E-A-T Signals",
+      "description": "Expertise, Experience, Authoritativeness, and Trustworthiness indicators",
+      "score": {
+        "value": 68,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Author bylines present on 60% of content pages",
+        "Company credentials and certifications are well-documented",
+        "Author expertise profiles need enhancement with more detailed backgrounds"
+      ],
+      "issues": [
+        {
+          "id": "eeat-001",
+          "severity": "high",
+          "message": "40% of content pages lack author attribution",
+          "affectedPages": 42,
+          "category": "authority"
+        },
+        {
+          "id": "eeat-002",
+          "severity": "medium",
+          "message": "Author bio pages are minimal and lack credentials",
+          "affectedPages": 12,
+          "category": "expertise"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "eeat-rec-001",
+          "priority": "high",
+          "title": "Add author attribution to all content",
+          "description": "Ensure every content page has a clear author byline with link to author profile",
+          "actionItems": [
+            "Add author bylines to 42 pages currently missing attribution",
+            "Create author profile pages for all content creators",
+            "Link author profiles from every content page"
+          ],
+          "estimatedImpact": "Expected 10-15 point increase in E-E-A-T score"
+        },
+        {
+          "id": "eeat-rec-002",
+          "priority": "medium",
+          "title": "Enhance author profiles",
+          "description": "Expand author bio pages with credentials, experience, and expertise",
+          "actionItems": [
+            "Add detailed professional backgrounds to 12 author profiles",
+            "Include relevant certifications and qualifications",
+            "Add links to external professional profiles (LinkedIn, publications)"
+          ],
+          "estimatedImpact": "Expected 5-8 point increase in E-E-A-T score"
+        }
+      ]
+    },
+    {
+      "id": "technical-seo",
+      "name": "Technical SEO",
+      "description": "Site structure, crawlability, and technical optimization",
+      "score": {
+        "value": 82,
+        "label": "Excellent",
+        "color": "green"
+      },
+      "insights": [
+        "XML sitemap is well-structured and up-to-date",
+        "Core Web Vitals scores are above industry benchmarks",
+        "Mobile responsiveness is excellent across all pages"
+      ],
+      "issues": [
+        {
+          "id": "tech-001",
+          "severity": "low",
+          "message": "Some images lack alt text attributes",
+          "affectedPages": 5,
+          "category": "accessibility"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "tech-rec-001",
+          "priority": "low",
+          "title": "Add missing alt text",
+          "description": "Ensure all images have descriptive alt text for accessibility and SEO",
+          "actionItems": [
+            "Audit all images across the site",
+            "Add descriptive alt text to images missing attributes",
+            "Ensure alt text is contextually relevant and not keyword-stuffed"
+          ],
+          "estimatedImpact": "Expected 2-3 point increase in Technical SEO score"
+        }
+      ]
+    },
+    {
+      "id": "ai-readability",
+      "name": "AI Readability",
+      "description": "How well content is structured for AI understanding and extraction",
+      "score": {
+        "value": 70,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Structured data (JSON-LD) is implemented on key pages",
+        "Content uses clear headings and semantic HTML",
+        "Some pages lack schema.org markup for products and services"
+      ],
+      "issues": [
+        {
+          "id": "ai-001",
+          "severity": "medium",
+          "message": "Product pages missing Product schema markup",
+          "affectedPages": 18,
+          "category": "structured-data"
+        },
+        {
+          "id": "ai-002",
+          "severity": "low",
+          "message": "FAQ schema not implemented on support pages",
+          "affectedPages": 6,
+          "category": "structured-data"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "ai-rec-001",
+          "priority": "high",
+          "title": "Implement Product schema markup",
+          "description": "Add JSON-LD Product schema to all product pages for better AI understanding",
+          "actionItems": [
+            "Add Product schema to 18 product pages",
+            "Include price, availability, ratings, and reviews in schema",
+            "Validate schema using Google's Rich Results Test"
+          ],
+          "estimatedImpact": "Expected 8-12 point increase in AI Readability score"
+        },
+        {
+          "id": "ai-rec-002",
+          "priority": "medium",
+          "title": "Add FAQ schema to support pages",
+          "description": "Implement FAQPage schema markup on support and help pages",
+          "actionItems": [
+            "Identify 6 support pages with FAQ content",
+            "Add FAQPage schema with questions and answers",
+            "Ensure FAQ content is visible on page, not hidden"
+          ],
+          "estimatedImpact": "Expected 4-6 point increase in AI Readability score"
+        }
+      ]
+    },
+    {
+      "id": "link-profile",
+      "name": "Link Profile",
+      "description": "Quality and relevance of inbound and internal links",
+      "score": {
+        "value": 65,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Strong internal linking structure with contextual anchor text",
+        "Limited high-authority external backlinks from relevant domains",
+        "Some orphaned pages lack internal links"
+      ],
+      "issues": [
+        {
+          "id": "link-001",
+          "severity": "high",
+          "message": "12 pages have no internal inbound links",
+          "affectedPages": 12,
+          "category": "internal-linking"
+        },
+        {
+          "id": "link-002",
+          "severity": "medium",
+          "message": "Low number of backlinks from authoritative domains",
+          "affectedPages": 0,
+          "category": "external-links"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "link-rec-001",
+          "priority": "high",
+          "title": "Fix orphaned pages",
+          "description": "Add internal links to 12 pages that are currently not linked from anywhere",
+          "actionItems": [
+            "Identify relevant pages to link to orphaned content",
+            "Add contextual internal links with descriptive anchor text",
+            "Update sitemap to ensure all pages are discoverable"
+          ],
+          "estimatedImpact": "Expected 6-10 point increase in Link Profile score"
+        },
+        {
+          "id": "link-rec-002",
+          "priority": "medium",
+          "title": "Build authoritative backlinks",
+          "description": "Develop content and outreach strategy to earn backlinks from high-authority domains",
+          "actionItems": [
+            "Create linkable assets (research, guides, tools)",
+            "Identify target domains in your industry",
+            "Develop outreach campaign for guest posts and resource pages"
+          ],
+          "estimatedImpact": "Expected 5-8 point increase in Link Profile score over 3-6 months"
+        }
+      ]
+    },
+    {
+      "id": "user-intent",
+      "name": "User Intent Alignment",
+      "description": "How well content matches search intent and user queries",
+      "score": {
+        "value": 73,
+        "label": "Good",
+        "color": "green"
+      },
+      "insights": [
+        "Most pages align well with informational and transactional intent",
+        "Some pages target keywords with mismatched intent",
+        "Content depth matches user expectations for most queries"
+      ],
+      "issues": [
+        {
+          "id": "intent-001",
+          "severity": "medium",
+          "message": "8 pages target keywords with intent mismatch",
+          "affectedPages": 8,
+          "category": "intent-alignment"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "intent-rec-001",
+          "priority": "medium",
+          "title": "Realign content with search intent",
+          "description": "Review and update pages with intent mismatches to better match user expectations",
+          "actionItems": [
+            "Audit 8 pages with intent mismatches",
+            "Update content to match primary search intent (informational vs transactional)",
+            "Add or adjust CTAs based on intent type"
+          ],
+          "estimatedImpact": "Expected 5-7 point increase in User Intent Alignment score"
+        }
+      ]
+    },
+    {
+      "id": "brand-signals",
+      "name": "Brand Signals",
+      "description": "Brand mentions, citations, and online presence indicators",
+      "score": {
+        "value": 60,
+        "label": "Fair",
+        "color": "orange"
+      },
+      "insights": [
+        "Brand name appears consistently across content",
+        "Limited brand mentions in external publications and directories",
+        "Social media presence is active but could be more integrated"
+      ],
+      "issues": [
+        {
+          "id": "brand-001",
+          "severity": "high",
+          "message": "Inconsistent NAP (Name, Address, Phone) information across directories",
+          "affectedPages": 0,
+          "category": "citations"
+        },
+        {
+          "id": "brand-002",
+          "severity": "medium",
+          "message": "Low brand mention volume in industry publications",
+          "affectedPages": 0,
+          "category": "mentions"
+        }
+      ],
+      "recommendations": [
+        {
+          "id": "brand-rec-001",
+          "priority": "high",
+          "title": "Standardize NAP information",
+          "description": "Ensure consistent Name, Address, Phone information across all business directories",
+          "actionItems": [
+            "Audit all business directory listings",
+            "Update inconsistent NAP information",
+            "Claim and verify listings on major directories (Google Business, Yelp, etc.)"
+          ],
+          "estimatedImpact": "Expected 8-12 point increase in Brand Signals score"
+        },
+        {
+          "id": "brand-rec-002",
+          "priority": "medium",
+          "title": "Increase brand mentions",
+          "description": "Develop PR and content strategy to increase brand mentions in industry publications",
+          "actionItems": [
+            "Pitch thought leadership content to industry publications",
+            "Participate in industry events and webinars",
+            "Develop relationships with journalists and bloggers in your space"
+          ],
+          "estimatedImpact": "Expected 5-8 point increase in Brand Signals score over 6-12 months"
+        }
+      ]
+    }
+  ]
+}
