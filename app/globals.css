@@ -22,28 +22,32 @@ body {
     Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* subtle letter-like background: radial gradient + diagonal stripes using CSS background-image */
+/* Enhanced hero background with better visibility */
 .hero-bg {
   background-image:
     radial-gradient(
       1200px 400px at 10% 10%,
-      rgba(99, 102, 241, 0.08),
-      transparent 15%
+      rgba(99, 102, 241, 0.12),
+      transparent 20%
     ),
     linear-gradient(
       160deg,
-      rgba(99, 102, 241, 0.04) 0%,
-      rgba(236, 72, 153, 0.03) 50%,
-      rgba(59, 130, 246, 0.03) 100%
+      rgba(99, 102, 241, 0.06) 0%,
+      rgba(236, 72, 153, 0.05) 50%,
+      rgba(59, 130, 246, 0.05) 100%
     ),
     repeating-linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.02) 0 1px,
-      rgba(255, 255, 255, 0) 1px 6px
+      rgba(255, 255, 255, 0.03) 0 1px,
+      rgba(255, 255, 255, 0) 1px 8px
     );
-  /* fallback background color */
-  background-color: #fbfdff;
-  border: 1px solid rgba(15, 23, 42, 0.03);
+  background-color: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
