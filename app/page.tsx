@@ -15,7 +15,7 @@ export default function HomePage() {
                 A demo product surface showing how AI-SEO pipelines map to
                 outputs — try the Audit demo below.
               </p>
-              <div className="flex flex-col gap-4 sm:flex-row">
+              <div className="mb-6 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/app/audit"
                   className="rounded-lg bg-slate-900 px-6 py-3 text-center text-lg font-semibold text-white shadow-lg transition-all hover:bg-slate-800 hover:shadow-xl active:scale-95"
@@ -28,6 +28,33 @@ export default function HomePage() {
                 >
                   Platform
                 </Link>
+              </div>
+
+              {/* Quick Access to Dashboard Pages */}
+              <div className="mt-8 border-t border-gray-200 pt-6">
+                <p className="mb-4 text-sm font-medium text-gray-600">
+                  Quick Access:
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href="/app/dashboard"
+                    className="rounded-md bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700 transition-all hover:bg-indigo-200"
+                  >
+                    Dashboard
+                  </Link>
+                  <Link
+                    href="/app/audit"
+                    className="rounded-md bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700 transition-all hover:bg-indigo-200"
+                  >
+                    Audit
+                  </Link>
+                  <Link
+                    href="/app/architecture"
+                    className="rounded-md bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700 transition-all hover:bg-indigo-200"
+                  >
+                    Architecture
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
