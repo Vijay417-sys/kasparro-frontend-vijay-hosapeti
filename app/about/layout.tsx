@@ -1,6 +1,6 @@
 import { MarketingLayout } from "@/components/layout/MarketingLayout";
 
-export default function MarketingLayoutWrapper({
+export default function AboutLayout({
   children,
 }: {
   children: React.ReactNode;
