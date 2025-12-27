@@ -13,26 +13,53 @@ export default function AuditPage() {
   const currentModule = useAppStore((state) => state.currentModule);
   const setSelectedBrand = useAppStore((state) => state.setSelectedBrand);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const brands = getAllBrands();
+
+  // Ensure component is mounted (client-side only)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Auto-select first brand on mount if available
   useEffect(() => {
-    if (!isInitialized && brands.length > 0) {
-      setSelectedBrand(brands[0].id);
-      setIsInitialized(true);
+    if (isMounted && brands.length > 0 && !currentAudit) {
+      const firstBrand = brands[0];
+      if (firstBrand) {
+        setSelectedBrand(firstBrand.id);
+      }
     }
-  }, [brands, setSelectedBrand, isInitialized]);
+  }, [isMounted, brands, currentAudit, setSelectedBrand]);
 
-  if (!isInitialized || !currentAudit) {
+  // Show loading state during initial mount
+  if (!isMounted) {
     return (
       <div className="flex min-h-[60vh] items-center justify-center bg-gray-50">
         <div className="text-center">
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
             <span className="text-3xl">📊</span>
           </div>
-          <p className="text-lg font-medium text-gray-600">
+          <p className="text-lg font-medium text-gray-600">Initializing...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show loading state if no audit data
+  if (!currentAudit) {
+    return (
+      <div className="flex min-h-[60vh] items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+            <span className="text-3xl">📊</span>
+          </div>
+          <p className="mb-2 text-lg font-medium text-gray-600">
             Loading audit data...
+          </p>
+          <p className="text-sm text-gray-500">
+            {brands.length === 0
+              ? "No brands available"
+              : `Found ${brands.length} brand(s)`}
           </p>
         </div>
       </div>
