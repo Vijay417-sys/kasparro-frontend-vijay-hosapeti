@@ -41,7 +41,7 @@ npm run dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3001](http://localhost:3001) in your browser.
 
 ### Available Scripts
 
@@ -61,10 +61,10 @@ The folder structure follows the assignment's emphasis on clear component bounda
 ```
 kasparro/
 ├── app/                          # Next.js App Router
-│   ├── (app)/                    # Route group for authenticated dashboard
+│   ├── app/                      # /app route namespace for product dashboard
 │   │   ├── dashboard/            # /app/dashboard - Brand snapshot
 │   │   ├── audit/                # /app/audit - Core product screen
-│   │   ├── architecture/        # /app/architecture - System representation
+│   │   ├── architecture/         # /app/architecture - System representation
 │   │   └── layout.tsx            # App shell layout
 │   ├── (marketing)/              # Route group for public marketing site
 │   │   ├── page.tsx              # / - Home page
@@ -106,7 +106,13 @@ kasparro/
 │       ├── cn.ts                 # className utility (clsx + tailwind-merge)
 │       └── validate-mocks.ts     # Zod validation script
 ├── audit-data/                   # Mock JSON files (per assignment requirement)
-│   └── example-brand-audit.json # Complete audit with 7 modules
+│   ├── example-brand-audit.json  # Brand 1: TechCorp Solutions
+│   ├── brand-2-audit.json        # Brand 2: Digital Marketing Pro
+│   ├── brand-3-audit.json        # Brand 3: StartupHub Inc
+│   ├── brand-4-audit.json        # Brand 4: E-Commerce Masters
+│   ├── brand-5-audit.json        # Brand 5: Content Creators Co
+│   ├── brand-6-audit.json        # Brand 6: SaaS Platform Pro
+│   └── brand-7-audit.json        # Brand 7: Local Business Hub
 ├── __tests__/                    # Unit tests
 │   ├── store.test.ts             # Zustand store tests
 │   └── AuditModuleView.test.tsx  # Component tests
@@ -244,7 +250,17 @@ npm test
 
 **Assignment Requirement: All data from `/audit-data/*.json`**
 
-The example audit file (`example-brand-audit.json`) contains:
+The repository includes 7 complete brand audit files:
+
+- `example-brand-audit.json` - TechCorp Solutions (AI Visibility: 72, Trust/E-E-A-T: 68, Coverage: 65)
+- `brand-2-audit.json` - Digital Marketing Pro (AI Visibility: 85, Trust/E-E-A-T: 78, Coverage: 72)
+- `brand-3-audit.json` - StartupHub Inc (AI Visibility: 58, Trust/E-E-A-T: 52, Coverage: 48)
+- `brand-4-audit.json` - E-Commerce Masters (AI Visibility: 90, Trust/E-E-A-T: 88, Coverage: 85)
+- `brand-5-audit.json` - Content Creators Co (AI Visibility: 65, Trust/E-E-A-T: 62, Coverage: 58)
+- `brand-6-audit.json` - SaaS Platform Pro (AI Visibility: 78, Trust/E-E-A-T: 75, Coverage: 72)
+- `brand-7-audit.json` - Local Business Hub (AI Visibility: 45, Trust/E-E-A-T: 42, Coverage: 38)
+
+Each audit file contains:
 
 - 7 audit modules (Content Quality, E-E-A-T, Technical SEO, AI Readability, Link Profile, User Intent, Brand Signals)
 - Complete module data: scores, insights, issues, recommendations
@@ -255,7 +271,8 @@ To add new mock data:
 
 1. Create a new JSON file in `/audit-data/`
 2. Follow the schema in `lib/schema/types.ts`
-3. Run `npm run validate-mocks` to verify
+3. Import it in `lib/mocks/loader.ts`
+4. Run `npm run validate-mocks` to verify
 
 ## 🚢 Deployment
 
@@ -343,7 +360,7 @@ npm run start
 
 ### What Was Simplified
 
-1. **Single Brand Mock**: Only one example brand audit (`example-brand-1`) is included. Production would load multiple brands from an API. The `lib/mocks/loader.ts` abstraction makes it trivial to swap in API calls.
+1. **Multiple Brand Mocks**: Seven brand audit files are included for testing (`example-brand-1` through `brand-7`). Production would load multiple brands from an API. The `lib/mocks/loader.ts` abstraction makes it trivial to swap in API calls.
 
 2. **No Authentication**: The `/app` routes assume authentication but don't implement it. To convert to production: add NextAuth.js with providers, protect routes with middleware, and add user session management.
 

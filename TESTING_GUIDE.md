@@ -19,14 +19,14 @@ npm run dev
 pnpm dev
 ```
 
-The server will start on **http://localhost:3000** (or the next available port like 3001).
+The server will start on **http://localhost:3001** (or the next available port if 3001 is busy).
 
 ### Step 3: Open in Browser
 
 Open your browser and navigate to:
 
 ```
-http://localhost:3000
+http://localhost:3001
 ```
 
 ---
@@ -35,7 +35,7 @@ http://localhost:3000
 
 ### 1. `/app/dashboard`
 
-**URL:** `http://localhost:3000/app/dashboard`
+**URL:** `http://localhost:3001/app/dashboard`
 
 **What to Test:**
 
@@ -51,14 +51,14 @@ http://localhost:3000
 **How to Access:**
 
 1. Click "Dashboard" in the header navigation (when on app pages)
-2. Or type `http://localhost:3000/app/dashboard` in the browser
+2. Or type `http://localhost:3001/app/dashboard` in the browser
 3. Or click "Dashboard" quick access link on home page
 
 ---
 
 ### 2. `/app/audit`
 
-**URL:** `http://localhost:3000/app/audit`
+**URL:** `http://localhost:3001/app/audit`
 
 **What to Test:**
 
@@ -84,14 +84,14 @@ http://localhost:3000
 
 1. Click "Run AI-SEO Audit" button on home page
 2. Click "Audit" in the header navigation (when on app pages)
-3. Or type `http://localhost:3000/app/audit` in the browser
+3. Or type `http://localhost:3001/app/audit` in the browser
 4. Or click "Audit" quick access link on home page
 
 ---
 
 ### 3. `/app/architecture`
 
-**URL:** `http://localhost:3000/app/architecture`
+**URL:** `http://localhost:3001/app/architecture`
 
 **What to Test:**
 
@@ -108,7 +108,7 @@ http://localhost:3000
 **How to Access:**
 
 1. Click "Architecture" in the header navigation (when on app pages)
-2. Or type `http://localhost:3000/app/architecture` in the browser
+2. Or type `http://localhost:3001/app/architecture` in the browser
 3. Or click "Architecture" quick access link on home page
 
 ---
@@ -198,14 +198,14 @@ http://localhost:3000
 1. **Verify file structure:**
 
    ```bash
-   ls -la app/\(app\)/
+   ls -la app/app/
    ```
 
 2. **Check if pages exist:**
    ```bash
-   test -f app/\(app\)/dashboard/page.tsx && echo "✅ Dashboard exists"
-   test -f app/\(app\)/audit/page.tsx && echo "✅ Audit exists"
-   test -f app/\(app\)/architecture/page.tsx && echo "✅ Architecture exists"
+   test -f app/app/dashboard/page.tsx && echo "✅ Dashboard exists"
+   test -f app/app/audit/page.tsx && echo "✅ Audit exists"
+   test -f app/app/architecture/page.tsx && echo "✅ Architecture exists"
    ```
 
 ---
@@ -214,12 +214,14 @@ http://localhost:3000
 
 When testing, you should see:
 
-**Dashboard:**
+**Dashboard (TechCorp Solutions - default brand):**
 
 - AI Visibility Score: **72**
 - Trust/E-E-A-T Score: **68**
 - Non-Branded Coverage: **65**
 - Last Audited: **January 15, 2024** (formatted date)
+
+**Note:** The BrandSelector now includes 7 brands with different scores. Try switching between brands to see different data!
 
 **Audit Modules:**
 
@@ -237,12 +239,12 @@ When testing, you should see:
 
 | Page         | URL                                      | Quick Access                            |
 | ------------ | ---------------------------------------- | --------------------------------------- |
-| Home         | `http://localhost:3000/`                 | Home link in header                     |
-| Dashboard    | `http://localhost:3000/app/dashboard`    | Header nav or home page link            |
-| Audit        | `http://localhost:3000/app/audit`        | "Run AI-SEO Audit" button or header nav |
-| Architecture | `http://localhost:3000/app/architecture` | Header nav or home page link            |
-| Platform     | `http://localhost:3000/platform`         | Header nav                              |
-| About        | `http://localhost:3000/about`            | Header nav                              |
+| Home         | `http://localhost:3001/`                 | Home link in header                     |
+| Dashboard    | `http://localhost:3001/app/dashboard`    | Header nav or home page link            |
+| Audit        | `http://localhost:3001/app/audit`        | "Run AI-SEO Audit" button or header nav |
+| Architecture | `http://localhost:3001/app/architecture` | Header nav or home page link            |
+| Platform     | `http://localhost:3001/platform`         | Header nav                              |
+| About        | `http://localhost:3001/about`            | Header nav                              |
 
 ---
 
