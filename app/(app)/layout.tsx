@@ -7,9 +7,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header area="app" />
-      <main className="w-full flex-1">
-        <div className="mx-auto max-w-7xl px-4 py-8">{children}</div>
-      </main>
+      <main className="w-full flex-1">{children}</main>
       <Footer />
     </div>
   );

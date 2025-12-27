@@ -24,14 +24,21 @@ export default function AuditPage() {
 
   if (!currentAudit) {
     return (
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <p className="text-gray-600">No audit data available.</p>
+      <div className="flex min-h-[60vh] items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+            <span className="text-3xl">📊</span>
+          </div>
+          <p className="text-lg font-medium text-gray-600">
+            Loading audit data...
+          </p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="flex h-[calc(100vh-64px)] flex-col lg:flex-row">
+    <div className="flex h-[calc(100vh-140px)] flex-col lg:flex-row">
       {/* Mobile menu button */}
       <div className="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 lg:hidden">
         <h1 className="text-lg font-semibold text-gray-900">Audit Modules</h1>
