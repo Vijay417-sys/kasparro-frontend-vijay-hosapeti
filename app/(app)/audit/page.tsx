@@ -13,16 +13,18 @@ export default function AuditPage() {
   const currentModule = useAppStore((state) => state.currentModule);
   const setSelectedBrand = useAppStore((state) => state.setSelectedBrand);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
   const brands = getAllBrands();
 
   // Auto-select first brand on mount if available
   useEffect(() => {
-    if (brands.length > 0 && !currentAudit) {
+    if (!isInitialized && brands.length > 0) {
       setSelectedBrand(brands[0].id);
+      setIsInitialized(true);
     }
-  }, [brands, currentAudit, setSelectedBrand]);
+  }, [brands, setSelectedBrand, isInitialized]);
 
-  if (!currentAudit) {
+  if (!isInitialized || !currentAudit) {
     return (
       <div className="flex min-h-[60vh] items-center justify-center bg-gray-50">
         <div className="text-center">
