@@ -16,12 +16,26 @@ export default function AuditPage() {
   const setSelectedBrand = useAppStore((state) => state.setSelectedBrand);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const brands = getAllBrands();
 
   // Ensure component is mounted (client-side only)
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    if (!isMounted) return;
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024); // lg breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, [isMounted]);
 
   // Auto-select first brand on mount if available
   useEffect(() => {
@@ -95,7 +109,7 @@ export default function AuditPage() {
       >
         <AuditSidebar
           modules={currentAudit.modules}
-          isMobile={true}
+          isMobile={isMobile}
           onClose={() => setIsMobileMenuOpen(false)}
         />
       </div>
